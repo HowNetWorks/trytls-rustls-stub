@@ -10,7 +10,7 @@ Install Rust toolchain from the [Rust home page](https://www.rust-lang.org/). An
 $ brew install rust
 ```
 
-Install TryTLS following the instructions at the TryTLS [project repository page](https://github.com/ouspg/trytls). This requires Python 2.7.9+ or 3.4+:
+Install TryTLS following the instructions at the TryTLS [project repository page](https://github.com/ouspg/trytls#installation). This requires Python 2.7.9+ or 3.4+:
 
 ```sh
 $ pip install trytls
