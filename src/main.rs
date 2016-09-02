@@ -32,7 +32,7 @@ fn parse_args(args: &Vec<String>) -> Result<(String, u16, ClientConfig), Box<Err
             return Err(From::from("Incorrect number of arguments"));
         }
     };
-    let port = try!(u16::from_str_radix(&args[2], 10));
+    let port = try!(args[2].parse());
     Ok((args[1].clone(), port, config))
 }
 
@@ -69,13 +69,10 @@ fn communicate(host: String, port: u16, config: ClientConfig) -> Result<Verdict,
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let (host, port, config) = match parse_args(&args) {
-        Ok(result) => result,
-        Err(err) => {
-            println!("Argument error: {}", err);
-            process::exit(2);
-        }
-    };
+    let (host, port, config) = parse_args(&args).unwrap_or_else(|err| {
+        println!("Argument error: {}", err);
+        process::exit(2);
+    });
 
     match communicate(host, port, config) {
         Ok(Verdict::Accept) => {
