@@ -21,3 +21,12 @@ $ pip install trytls
 ```sh
 $ trytls https cargo run --quiet
 ```
+
+## License
+
+Like Rustls, this project is triple-licensed. You can use this software under
+any of these three licenses:
+
+ * MIT license (see [`LICENSE-MIT`](./LICENSE-MIT))
+ * ISC license (see [`LICENSE-ISC`](./LICENSE-ISC))
+ * Apache License, Version 2.0 (see [`LICENSE-APACHE`](./LICENSE-APACHE))

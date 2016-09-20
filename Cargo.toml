@@ -2,6 +2,7 @@
 name = "rustls-trytls-stub"
 version = "0.1.0"
 authors = ["Joachim Viide <jviide@iki.fi>"]
+license = "MIT/ISC/Apache-2.0"
 
 [dependencies]
 rustls = "0.1.2"
