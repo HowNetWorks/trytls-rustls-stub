@@ -1,9 +1,9 @@
 [package]
 name = "rustls-trytls-stub"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Joachim Viide <jviide@iki.fi>"]
 license = "MIT/ISC/Apache-2.0"
 
 [dependencies]
-rustls = "0.1.2"
-webpki-roots = "0.2.0"
+rustls = "0.5.2"
+webpki-roots = "0.5.0"
